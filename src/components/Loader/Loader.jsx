@@ -20,7 +20,7 @@ const Loader = () => {
           visible={true}
           /*display={flex}
           justifyContent={center}*/
-    />
+      />
     </Wrapper>
   );
 };
