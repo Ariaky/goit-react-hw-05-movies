@@ -18,8 +18,8 @@ const Loader = () => {
           wrapperStyle={{}}
           wrapperClass=""
           visible={true}
-          display={flex}
-          justifyContent={center}
+          /*display={flex}
+          justifyContent={center}*/
     />
     </Wrapper>
   );
