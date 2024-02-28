@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+/* @import-normalize; /* bring in normalize.css styles */
 
 body {
   margin: 0;
@@ -25,7 +25,7 @@ button {
 }
 
 img {
-  display: inline-block;
+  display: block;
   max-width: 100%;
   height: auto;
 }
