@@ -19,7 +19,7 @@ const Cast = () => {
     fetchCastById();
   }, [fetchCastById]);
 
-  const defaultImg ='http://image.tmdb.org/t/p/';
+  const defaultImg = `https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700`
   return (
     <div>
       {cast && cast.length > 0 ? (

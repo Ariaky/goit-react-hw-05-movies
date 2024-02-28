@@ -12,7 +12,7 @@ const MovieDetailsComp = ({
 }) => {
   const location = useLocation();
   const backLink = useRef(location.state?.from ?? '/movies');
-  const defaultImg ='http://image.tmdb.org/t/p/';
+  const defaultImg = `https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700`
   return (
     <>
       <BackBtn to={backLink.current}>← Go back</BackBtn>
