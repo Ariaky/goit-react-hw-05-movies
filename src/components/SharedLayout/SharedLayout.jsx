@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom'; // component for rendering child components
 import { Suspense } from 'react';
 import { Header, MainMenuItem } from './SharedLayout.styled'
 
