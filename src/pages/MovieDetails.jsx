@@ -1,4 +1,5 @@
 import MovieDetailsComp from 'components/MovieDetails/MovieDetails';
+
 import { Suspense, useCallback, useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { fetchMoviesById } from 'services/api';

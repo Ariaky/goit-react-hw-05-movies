@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import BackBtn from 'components/BackBtn/BackBtn';
 import { useRef } from 'react';
+import { MovieDetailsContainer } from './MovieDetails.styled'
 
 const MovieDetailsComp = ({
   poster,
@@ -14,7 +15,7 @@ const MovieDetailsComp = ({
   const backLink = useRef(location.state?.from ?? '/movies');
   const defaultImg = `https://via.placeholder.com/200x300?text=No+Image`
   return (
-    <>
+    <MovieDetailsContainer>
       <BackBtn to={backLink.current}>← Go back</BackBtn>
       <div>
         <div>
@@ -48,7 +49,7 @@ const MovieDetailsComp = ({
           <Link to="reviews">Reviews</Link>
         </li>
       </ul>
-    </>
+    </MovieDetailsContainer>
   );
 };
 

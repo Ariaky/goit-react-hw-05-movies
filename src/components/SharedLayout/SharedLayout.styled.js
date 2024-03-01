@@ -14,7 +14,6 @@ export const Header = styled.nav`
   font-size: 20px;
   font-weight: 500;
   a {
-    text-decoration: none;
     color: black;
     background-color: rgb(240, 240, 240);
     border-radius: 10px;

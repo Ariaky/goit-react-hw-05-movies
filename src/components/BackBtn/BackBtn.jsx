@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import { BackBtn } from './BackBtn.styled'
 
 const BackLink = ({ to, children }) => {
-  return <Link to={to}>{children}</Link>;
+  return <BackBtn to={to}>{children}</BackBtn>
 };
 
 export default BackLink;
