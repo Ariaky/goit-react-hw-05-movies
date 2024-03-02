@@ -3,20 +3,21 @@ import styled from 'styled-components';
 
 export const StyledLink = styled(Link)`
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 15px;
+
 `;
 
 export const Img = styled.img`
-height: 500px;
-object-fit: cover;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    
 `;
 
 export const Title = styled.h3`
-  margin: 0 15px;
+  margin-bottom: 10px;
 `;
 
 export const Rating = styled.div`
@@ -24,7 +25,7 @@ export const Rating = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 15px;
+  margin-bottom: 10px;
 `;
 
 export const RatingValue = styled.span`
