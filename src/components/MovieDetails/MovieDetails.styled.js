@@ -7,7 +7,6 @@ export const MovieDetailsContainer = styled.div`
     margin-bottom: 15px;
 
     @media only screen and (min-width: 768px) {
-    flex-direction: column;
-   
+        flex-direction: column;
 }
 `
