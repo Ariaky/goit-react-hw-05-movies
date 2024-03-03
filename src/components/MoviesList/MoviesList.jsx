@@ -1,15 +1,19 @@
 import { MovieCard } from 'components/MovieCard/MovieCard'; 
+import { Wrapper, Title, StyledMovieList, MovieItem } from './MoviesList.styled'
 
 const MovieList = ({ list, state }) => {
     return (
         <>
-            <ul>
-                {list.map(movie => (
-                <li key={movie.id}>
-                    <MovieCard info={movie} />
-                </li>
-                ))}
-            </ul>
+            <Wrapper>
+                <Title>Trending today</Title>
+                <StyledMovieList>
+                    {list.map(movie => (
+                    <MovieItem key={movie.id}>
+                        <MovieCard info={movie} />
+                    </MovieItem>
+                    ))}
+                </StyledMovieList>
+            </Wrapper>
         </>
     );
   };

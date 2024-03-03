@@ -1,5 +1,4 @@
 import MovieList from 'components/MoviesList/MoviesList';
-
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { fetchMovies } from 'services/api';
@@ -21,7 +20,6 @@ const Home = () => {
 
   return (
     <>
-      <h1>Trending today</h1>
       <MovieList list={films} state={{ from: location }} />
     </>
   );
