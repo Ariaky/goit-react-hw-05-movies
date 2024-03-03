@@ -20,6 +20,7 @@ const Home = () => {
 
   return (
     <>
+      <h1>Trending today</h1>
       <MovieList list={films} state={{ from: location }} />
     </>
   );

@@ -15,11 +15,3 @@ export const StyledMovieList = styled.ul`
 export const MovieItem = styled.li`
     margin-bottom: 15px;
 `
-export const Title = styled.h1`
-    margin-bottom: 15px;
-    font-size: 28px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    text-align: center;
-
-`
