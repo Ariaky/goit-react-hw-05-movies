@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const Header = styled.nav`
   display: flex;
+  justify-content: center;
   gap: 20px;
   margin-bottom: 15px;
   padding: 20px 20px;
@@ -28,6 +29,10 @@ export const Header = styled.nav`
     transform: scale(1.1);
     transition: 0.3s ease-in-out;
   }
+  @media only screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+
 `;
 
 export const MainMenuItem = styled(NavLink)`
