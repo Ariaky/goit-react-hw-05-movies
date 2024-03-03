@@ -29,19 +29,30 @@ export const Img = styled.img`
 `;
 
 export const Title = styled.h3`
-  margin-bottom: 10px;
+  margin: 0 10px 10px 10px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 14px;
+}
 `;
 
 export const Rating = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin: 0 10px 10px 10px;
 `;
 
 export const RatingValue = styled.span`
   display: block;
   line-height: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 14px;
 `;
