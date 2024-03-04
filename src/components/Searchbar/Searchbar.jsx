@@ -1,4 +1,4 @@
-
+import { Form, Input, Button } from './SearchBar.styled';
 
 const Searchbar = ({ setSearchParams, fetchMoviesFromApi }) => {
     const handleSubmit = async e => {
@@ -11,16 +11,16 @@ const Searchbar = ({ setSearchParams, fetchMoviesFromApi }) => {
     };
   
     return (
-      <form onSubmit={handleSubmit}>
-        <input 
+      <Form onSubmit={handleSubmit}>
+        <Input 
           type="text" 
           name="query" 
           autoComplete="off"
           autoFocus
           placeholder="Enter movie name..."
         />
-        <button type="submit">Search</button>
-      </form>
+        <Button type="submit">Search</Button>
+      </Form>
     );
   };
   
