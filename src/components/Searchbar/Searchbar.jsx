@@ -1,3 +1,5 @@
+
+
 const Searchbar = ({ setSearchParams, fetchMoviesFromApi }) => {
     const handleSubmit = async e => {
       e.preventDefault();
@@ -10,7 +12,13 @@ const Searchbar = ({ setSearchParams, fetchMoviesFromApi }) => {
   
     return (
       <form onSubmit={handleSubmit}>
-        <input type="text" name="query" />
+        <input 
+          type="text" 
+          name="query" 
+          autoComplete="off"
+          autoFocus
+          placeholder="Enter movie name..."
+        />
         <button type="submit">Search</button>
       </form>
     );
