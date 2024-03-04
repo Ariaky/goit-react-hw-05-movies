@@ -8,6 +8,7 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('query');
+  
 
   async function fetchMoviesFromApi(searchQuery) {
     try {
@@ -34,3 +35,4 @@ const Movies = () => {
 };
 
 export default Movies;
+

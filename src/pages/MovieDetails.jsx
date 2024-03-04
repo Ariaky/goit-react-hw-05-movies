@@ -1,5 +1,5 @@
 import MovieDetailsComp from 'components/MovieDetails/MovieDetails';
-
+import Loader from '../components/Loader/Loader';
 import { Suspense, useCallback, useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { fetchMoviesById } from 'services/api';
@@ -31,7 +31,7 @@ const MovieDetails = () => {
         overview={movie.overview}
         genres={movie.genres}
       />
-      <Suspense>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </>
