@@ -1,27 +1,27 @@
 import { BallTriangle } from 'react-loader-spinner';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`;
 
 const Loader = () => {
   return (
-    <Wrapper>
       <BallTriangle
           height={100}
           width={100}
           radius={5}
           color="#5c5470"
           ariaLabel="ball-triangle-loading"
-          wrapperStyle={{}}
+          wrapperStyle={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            margin: '0 auto',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            right: '0',
+            bottom: '0',
+          }}
           wrapperClass=""
           visible={true}
-          /*display={flex}
-          justifyContent={center}*/
       />
-    </Wrapper>
   );
 };
 
