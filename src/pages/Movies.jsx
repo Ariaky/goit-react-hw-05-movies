@@ -3,6 +3,9 @@ import MovieList from 'components/MoviesList/MoviesList';
 import { useSearchParams } from "react-router-dom";
 import { fetchMoviesByQuery } from '../services/api';
 import { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom'; // component for rendering child components
+import { Suspense } from 'react';
+import Loader from 'components/Loader/Loader';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -30,6 +33,9 @@ const Movies = () => {
         fetchMoviesFromApi={fetchMoviesFromApi}
       />
       <MovieList list={movies} />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
