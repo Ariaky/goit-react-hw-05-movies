@@ -11,7 +11,7 @@ export const MovieDetailsContainer = styled.div`
 }
 `;
 
-export const Title = styled.h2`
+export const MovieTitle = styled.h1`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 `;
@@ -31,7 +31,8 @@ export const InfoWrapper = styled.div`
 export const Image = styled.img`
     height: 500px;
     object-fit: cover;
-
+    min-width: 100%;
+    
     @media only screen and (min-width: 768px) {
         height: 350px;
     }

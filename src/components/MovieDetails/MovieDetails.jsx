@@ -3,7 +3,7 @@ import BackBtn from 'components/BackBtn/BackBtn';
 import { useRef } from 'react';
 import { MovieDetailsContainer } from './MovieDetails.styled';
 import StarRatings from 'react-star-ratings';
-import { Image, Title, RatingWrapper, Rating, Description, InfoWrapper } from './MovieDetails.styled';
+import { Image, MovieTitle, RatingWrapper, Rating, Description, InfoWrapper } from './MovieDetails.styled';
 
 const MovieDetailsComp = ({
   poster,
@@ -30,9 +30,9 @@ const MovieDetailsComp = ({
           />
         </div>
         <div>
-          <Title>
+          <MovieTitle>
             {title} ({releaseDate ? releaseDate.slice(0, 4) : null})
-          </Title>
+          </MovieTitle>
           <RatingWrapper>
             <StarRatings
                       rating={voteAvarage}
