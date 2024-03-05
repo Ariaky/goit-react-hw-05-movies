@@ -1,7 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import BackBtn from 'components/BackBtn/BackBtn';
 import { useRef } from 'react';
-import { MovieDetailsContainer } from './MovieDetails.styled'
+import { MovieDetailsContainer } from './MovieDetails.styled';
+import StarRatings from 'react-star-ratings';
+import { Image, RatingWrapper, Rating, Description } from './MovieDetails.styled';
 
 const MovieDetailsComp = ({
   poster,
@@ -19,7 +21,7 @@ const MovieDetailsComp = ({
       <BackBtn to={backLink.current}>← Go back</BackBtn>
       <div>
         <div>
-          <img
+          <Image
             src={
               poster ? `https://image.tmdb.org/t/p/w500/${poster}` : defaultImg
             }
@@ -31,13 +33,22 @@ const MovieDetailsComp = ({
           <h2>
             {title} ({releaseDate ? releaseDate.slice(0, 4) : null})
           </h2>
-          <p>User Score: {Math.round(voteAvarage * 10)}%</p>
+          <RatingWrapper>
+            <StarRatings
+                      rating={voteAvarage}
+                      numberOfStars={10}
+                      starRatedColor="#ffc414"
+                      starDimension="22px"
+                      starSpacing="3px"
+            />
+            <Rating>{voteAvarage}</Rating>
+          </RatingWrapper>
           <h3>Overview</h3>
           <p>{overview}</p>
           <h4>Genres</h4>
-          <ul>
+          <Description>
             {genres && genres.map(({ name, id }) => <li key={id}>{name}</li>)}
-          </ul>
+          </Description>
         </div>
       </div>
       <p>Additional information</p>
@@ -50,7 +61,8 @@ const MovieDetailsComp = ({
         </li>
       </ul>
     </MovieDetailsContainer>
-  );
+    );
 };
 
 export default MovieDetailsComp;
+
