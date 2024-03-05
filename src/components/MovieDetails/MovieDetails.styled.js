@@ -29,16 +29,11 @@ export const InfoWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-    height: 500px;
     object-fit: cover;
     min-width: 100%;
-    
-    @media only screen and (min-width: 768px) {
-        height: 350px;
-    }
 
-    @media only screen and (min-width: 1280px) {
-        height: 500px;
+    @media only screen and (min-width: 768px) {
+        min-width: 226px;
     }
 `;
 
