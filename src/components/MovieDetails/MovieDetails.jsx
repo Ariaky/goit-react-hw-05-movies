@@ -3,7 +3,7 @@ import BackBtn from 'components/BackBtn/BackBtn';
 import { useRef } from 'react';
 import { MovieDetailsContainer } from './MovieDetails.styled';
 import StarRatings from 'react-star-ratings';
-import { Image, RatingWrapper, Rating, Description } from './MovieDetails.styled';
+import { Image, Title, RatingWrapper, Rating, Description, InfoWrapper } from './MovieDetails.styled';
 
 const MovieDetailsComp = ({
   poster,
@@ -19,7 +19,7 @@ const MovieDetailsComp = ({
   return (
     <MovieDetailsContainer>
       <BackBtn to={backLink.current}>← Go back</BackBtn>
-      <div>
+      <InfoWrapper>
         <div>
           <Image
             src={
@@ -30,9 +30,9 @@ const MovieDetailsComp = ({
           />
         </div>
         <div>
-          <h2>
+          <Title>
             {title} ({releaseDate ? releaseDate.slice(0, 4) : null})
-          </h2>
+          </Title>
           <RatingWrapper>
             <StarRatings
                       rating={voteAvarage}
@@ -50,7 +50,7 @@ const MovieDetailsComp = ({
             {genres && genres.map(({ name, id }) => <li key={id}>{name}</li>)}
           </Description>
         </div>
-      </div>
+      </InfoWrapper>
       <p>Additional information</p>
       <ul>
         <li>
