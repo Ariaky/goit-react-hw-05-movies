@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const MovieDetailsContainer = styled.div`
     display: flex;
@@ -23,7 +24,7 @@ export const InfoWrapper = styled.div`
     flex-direction: column;
     gap: 20px;
     margin-bottom: 15px;
-    border-bottom: 1px solid gray;
+    border-bottom: 5px groove rgba(152,150,158,0.61);
 
     @media only screen and (min-width: 768px) {
     flex-direction: row;
@@ -74,4 +75,38 @@ export const TitleInfo = styled.h2`
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 6px;
+`
+
+export const AddInfo = styled.ul`
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    padding: 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    border-bottom: 5px groove rgba(152,150,158,0.61);
+    font-size: 20px;
+    font-weight: 500;
+`
+
+export const AddInfoItem = styled(NavLink)`
+    color: black;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 0px 5px 5px #949484;
+    padding: 5px 10px;
+    min-width: 70px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 0.3s ease-in-out;
+    }
+
+    &.active {
+        color: rgb(59, 82, 166);
+    }
 `

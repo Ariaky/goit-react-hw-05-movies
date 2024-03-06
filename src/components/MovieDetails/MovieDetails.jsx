@@ -3,7 +3,7 @@ import BackBtn from 'components/BackBtn/BackBtn';
 import { useRef } from 'react';
 import { MovieDetailsContainer } from './MovieDetails.styled';
 import StarRatings from 'react-star-ratings';
-import { Image, MovieTitle, RatingWrapper, RatingValue, Description, InfoWrapper, TitleInfo, Overview } from './MovieDetails.styled';
+import { Image, MovieTitle, RatingWrapper, RatingValue, Description, InfoWrapper, TitleInfo, Overview, AddInfo, AddInfoItem } from './MovieDetails.styled';
 
 const MovieDetailsComp = ({
   poster,
@@ -55,14 +55,10 @@ const MovieDetailsComp = ({
         </div>
       </InfoWrapper>
       <TitleInfo>Additional information</TitleInfo>
-      <ul>
-        <li>
-          <Link to="cast">Cast</Link>
-        </li>
-        <li>
-          <Link to="reviews">Reviews</Link>
-        </li>
-      </ul>
+      <AddInfo>
+          <AddInfoItem to="cast">Cast</AddInfoItem>
+          <AddInfoItem to="reviews">Reviews</AddInfoItem>
+      </AddInfo>
     </MovieDetailsContainer>
     );
 };
