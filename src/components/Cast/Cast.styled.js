@@ -17,7 +17,7 @@ export const CastWrapper = styled.div`
     border: 1px solid rgba(190, 190, 190);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s ease-in-out;
-    max-width: 220px;
+    width: 220px;
 
     img {
         height: auto;

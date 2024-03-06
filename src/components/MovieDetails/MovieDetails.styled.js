@@ -82,7 +82,7 @@ export const AddInfo = styled.ul`
     justify-content: center;
     gap: 20px;
     margin-bottom: 15px;
-    padding: 20px 20px;
+    padding: 20px 20px 20px 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     border-bottom: 5px groove rgba(152,150,158,0.61);
@@ -101,7 +101,7 @@ export const AddInfoItem = styled(NavLink)`
     border: 1px solid gray;
     box-shadow: 0px 5px 5px #949484;
     padding: 5px 10px;
-    min-width: 70px;
+    min-width: 80px;
     text-align: center;
     transition: 0.3s ease-in-out;
 
