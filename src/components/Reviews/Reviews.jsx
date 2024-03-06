@@ -22,12 +22,13 @@ const Reviews = () => {
   return (
     <ul>
       {reviews && reviews.length > 0 ? (
-        reviews.map(({ author, content, created_at }) => (
-          <li key={created_at}>
+        reviews.map(({ id, author, content, created_at }) => (
+          <li key={id}>
             <p>
               <b>Author: {author}</b>
             </p>
             <p>{content}</p>
+            <p>{new Date(created_at).toUTCString()}</p>
           </li>
         ))
       ) : (
