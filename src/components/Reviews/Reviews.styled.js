@@ -15,8 +15,7 @@ export const Author = styled.p`
 export const ReviewDate = styled.p`
     color: grey;
 `
+
 export const ReviewText = styled.p`
     text-align: justify;
-    height: 110px;
-    overflow: scroll;      
 `
