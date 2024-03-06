@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import BackBtn from 'components/BackBtn/BackBtn';
 import { useRef } from 'react';
 import { MovieDetailsContainer } from './MovieDetails.styled';
@@ -66,4 +66,3 @@ const MovieDetailsComp = ({
 export default MovieDetailsComp;
 
 
-/*{genres && genres.map(({ name, id }) => <li key={id}>{name}</li>)}*/
