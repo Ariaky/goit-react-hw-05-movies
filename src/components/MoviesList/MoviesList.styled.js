@@ -12,6 +12,7 @@ export const StyledMovieList = styled.ul`
     gap: 15px;
     justify-content: space-around;
 `
+
 export const MovieItem = styled.li`
     margin-bottom: 15px;
 `

@@ -17,7 +17,7 @@ export const StyledLink = styled(Link)`
     }
 
     @media only screen and (min-width: 768px) {
-        max-width: 184px;
+        max-width: 220px;
     }
 `;
 
@@ -39,7 +39,7 @@ export const Title = styled.h3`
 }
 `;
 
-export const Rating = styled.div`
+export const RatingWrapper = styled.div`
   display: flex;
   flex-wrap: no-wrap;
   justify-content: space-between;

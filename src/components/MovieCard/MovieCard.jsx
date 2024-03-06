@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import StarRatings from "react-star-ratings";
-import { Img, Rating, RatingValue, StyledLink, Title } from "./MovieCard.styled";
+import { Img, RatingWrapper, RatingValue, StyledLink, Title } from "./MovieCard.styled";
 
 const BASIC_IMG_URL = 'https://image.tmdb.org/t/p/original';
 const defaultImg = `https://via.placeholder.com/200x300?text=No+Image`;
@@ -21,16 +21,16 @@ export const MovieCard = ({
       <Title>
         {title} ({releaseDate.getFullYear()})
       </Title>
-      <Rating>
+      <RatingWrapper>
         <StarRatings
           rating={vote_average}
           numberOfStars={10}
           starRatedColor="#ffc414"
-          starDimension="19px"
+          starDimension="15px"
           starSpacing="1px"
         />
         <RatingValue>{vote_average.toFixed(1)}</RatingValue>
-      </Rating>
+      </RatingWrapper>
     </StyledLink>
   );
 };

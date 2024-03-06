@@ -3,7 +3,7 @@ import BackBtn from 'components/BackBtn/BackBtn';
 import { useRef } from 'react';
 import { MovieDetailsContainer } from './MovieDetails.styled';
 import StarRatings from 'react-star-ratings';
-import { Image, MovieTitle, RatingWrapper, Rating, Description, InfoWrapper } from './MovieDetails.styled';
+import { Image, MovieTitle, RatingWrapper, RatingValue, Description, InfoWrapper, TitleInfo, Overview } from './MovieDetails.styled';
 
 const MovieDetailsComp = ({
   poster,
@@ -16,6 +16,9 @@ const MovieDetailsComp = ({
   const location = useLocation();
   const backLink = useRef(location.state?.from ?? '/movies');
   const defaultImg = `https://via.placeholder.com/200x300?text=No+Image`
+
+  const roundedVoteAverage = voteAvarage ? voteAvarage.toFixed(1) : '';
+
   return (
     <MovieDetailsContainer>
       <BackBtn to={backLink.current}>← Go back</BackBtn>
@@ -38,20 +41,20 @@ const MovieDetailsComp = ({
                       rating={voteAvarage}
                       numberOfStars={10}
                       starRatedColor="#ffc414"
-                      starDimension="22px"
+                      starDimension="16px"
                       starSpacing="3px"
             />
-            <Rating>{voteAvarage}</Rating>
+            <RatingValue>{roundedVoteAverage}</RatingValue>
           </RatingWrapper>
-          <h3>Overview</h3>
-          <p>{overview}</p>
-          <h4>Genres</h4>
+          <TitleInfo>Overview</TitleInfo>
+          <Overview>{overview}</Overview>
+          <TitleInfo>Genres</TitleInfo>
           <Description>
-            {genres && genres.map(({ name, id }) => <li key={id}>{name}</li>)}
+            {genres && genres.map(item => item.name).join(', ')}
           </Description>
         </div>
       </InfoWrapper>
-      <p>Additional information</p>
+      <TitleInfo>Additional information</TitleInfo>
       <ul>
         <li>
           <Link to="cast">Cast</Link>
@@ -66,3 +69,5 @@ const MovieDetailsComp = ({
 
 export default MovieDetailsComp;
 
+
+/*{genres && genres.map(({ name, id }) => <li key={id}>{name}</li>)}*/
