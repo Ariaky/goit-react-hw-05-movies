@@ -9,9 +9,7 @@ export const Header = styled.nav`
   padding: 20px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
-  border-radius: 10px;
-  border: 1px solid rgba(190, 190, 190);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-bottom: 5px groove rgba(152,150,158,0.61);
   font-size: 20px;
   font-weight: 500;
   a {
