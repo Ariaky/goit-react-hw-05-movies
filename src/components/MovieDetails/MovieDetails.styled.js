@@ -35,6 +35,7 @@ export const InfoWrapper = styled.div`
 export const Image = styled.img`
     object-fit: cover;
     min-width: 100%;
+    margin-top: 10px;
     
     @media only screen and (min-width: 768px) {
         min-width: 226px;
