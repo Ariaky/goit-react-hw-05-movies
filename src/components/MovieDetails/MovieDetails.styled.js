@@ -88,6 +88,10 @@ export const AddInfo = styled.ul`
     border-bottom: 5px groove rgba(152,150,158,0.61);
     font-size: 20px;
     font-weight: 500;
+
+    @media only screen and (min-width: 768px) {
+        justify-content: flex-start;
+      }
 `
 
 export const AddInfoItem = styled(NavLink)`

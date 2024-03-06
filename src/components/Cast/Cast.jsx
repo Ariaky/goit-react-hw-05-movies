@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesByCast } from 'services/api';
+import { CastMainWrapper, CastWrapper } from './Cast.styled';
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -21,29 +22,29 @@ const Cast = () => {
 
   const defaultImg = `https://via.placeholder.com/200x300?text=No+Image`
   return (
-    <div>
+    <CastMainWrapper>
       {cast && cast.length > 0 ? (
         cast.map(({ id, profile_path, name, character }) => {
           return (
-            <div key={id}>
+            <CastWrapper key={id}>
               <img
                 src={
                   profile_path
                     ? `https://image.tmdb.org/t/p/w500/${profile_path}`
                     : defaultImg
                 }
-                width={150}
+                width={200}
                 alt={name}
               />
               <p>{name}</p>
               <p>Character: {character}</p>
-            </div>
+            </CastWrapper>
           );
         })
       ) : (
         <p>We don't have any cast for this movie.</p>
       )}
-    </div>
+    </CastMainWrapper>
   );
 };
 
