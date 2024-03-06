@@ -23,6 +23,7 @@ export const InfoWrapper = styled.div`
     flex-direction: column;
     gap: 20px;
     margin-bottom: 15px;
+    border-bottom: 1px solid gray;
 
     @media only screen and (min-width: 768px) {
     flex-direction: row;
@@ -33,9 +34,10 @@ export const InfoWrapper = styled.div`
 export const Image = styled.img`
     object-fit: cover;
     min-width: 100%;
-
+    
     @media only screen and (min-width: 768px) {
         min-width: 226px;
+        margin-bottom: 15px;
     }
 `;
 
@@ -53,6 +55,7 @@ export const RatingValue = styled.span`
 export const Overview = styled.p`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
+    margin-bottom: 15px;
 `
 export const Description = styled.ul`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -61,10 +64,14 @@ export const Description = styled.ul`
     display: flex;
     flex-direction: row;
     gap: 4px;
+    margin-bottom: 15px;
+    }
+
   `;
 
 export const TitleInfo = styled.h2`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 6px;
 `
