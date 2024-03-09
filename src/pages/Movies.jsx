@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom'; // component for rendering child components
 import { Suspense } from 'react';
 import Loader from 'components/Loader/Loader';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -19,6 +20,7 @@ const Movies = () => {
       setMovies(moviesFounded);
     } catch (error) {
       console.error(error);
+      Notify.failure('An error occurred while searching for movies.');
     }
   }
 

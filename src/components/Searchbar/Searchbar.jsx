@@ -1,7 +1,7 @@
 import { Form, Input, Button } from './SearchBar.styled';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-const Searchbar = ({ setSearchParams, fetchMoviesFromApi }) => {
+const Searchbar = ({ setSearchParams, fetchMoviesFromApi, searching }) => {
     const handleSubmit = async e => {
       e.preventDefault();
       const searchForm = e.currentTarget;
